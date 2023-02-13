@@ -32,7 +32,28 @@ while(i * 15 < 1000):
     i = i + 1
 sum = sum(x) + sum(y) - sum(l)
 
+print(sum)
 
+#----------------------- The Normal Solution -----------------------#
+
+x = 3
+y = 5
+l = 15
+sum = 0
+i = 1
+while(i * x < 1000):
+    sum = sum + x * i
+    i = i + 1
+i = 1
+while(i * y < 1000):
+    sum = sum + y * i
+    i = i + 1
+i = 1
+while(i * l < 1000):
+    sum = sum - l * i
+    i = i + 1
+
+print(sum)
 
 #----------------------- Constant time solution -----------------------#
 x = 3
