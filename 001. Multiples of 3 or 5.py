@@ -1,6 +1,7 @@
 #####################################################################################################################################################
 #   Source Name     : 001. Multiples of 3 or 5.py                                                                                                   #
 #   Version         : 1.0                                                                                                                           #
+#   Link            : https://projecteuler.net/problem=1                                                                                            #
 #   Created date    : 12/02/2023                                                                                                                    #
 #   Last updated    : 13/02/2023                                                                                                                    #
 #   Auther          : Mohammed El-Mustafa Ahmed                                                                                                     #
@@ -8,6 +9,13 @@
 #####################################################################################################################################################
 
 #----------------------- Project Euler Problem -----------------------#
+
+#########################################################################
+#   Find the sum of all the multiples of 3 or 5 below 1000.             #
+#########################################################################
+
+#----------------------- Description of the Solution -----------------------#
+
 
 # The fact that we want all multiplies of x or y can give us the idea of just summing over all the multiplies of each,
 # but some multiplies are common between x and y like x * y so we use the inclusion-exclusion principle, so we just sum
@@ -56,6 +64,7 @@ while(i * l < 1000):
 print(sum)
 
 #----------------------- Constant time solution -----------------------#
+
 x = 3
 y = 5
 l = 15          # The least common multiply of 3 and 5
@@ -92,14 +101,16 @@ print("This program finds the sum of all multiplies of x or y below n.")
 x = int(input("Please input x: "))
 y = int(input("Please input y: "))
 n = int(input("Please input n: "))
-l = x * y / gcd(x, y)
+l = x * y // gcd(x, y)
 
 nx = (n-1) // x
 ny = (n-1) // y
 nl = (n-1) // l
 
-sumx = nx * (nx + 1) * x / 2
-sumy = ny * (ny + 1) * y / 2
-suml = nl * (nl + 1) * l / 2
+sumx = nx * (nx + 1) * x // 2
+sumy = ny * (ny + 1) * y // 2
+suml = nl * (nl + 1) * l // 2
 
 sum = sumx + sumy - suml
+
+print(sum)
