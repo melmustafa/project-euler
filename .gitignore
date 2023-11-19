@@ -1,1 +1,3 @@
-*.cpp
+*.out
+*.obj
+*.exe
