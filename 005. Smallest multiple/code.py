@@ -1,10 +1,10 @@
 #####################################################################################################################################################
-#   Source Name     : 004. Largest palindrome product.py                                                                                            #
+#   Source Name     : code.py                                                                                                     #
 #   Version         : 1.0                                                                                                                           #
-#   Link            : https://projecteuler.net/problem=4                                                                                            #
+#   Link            : https://projecteuler.net/problem=5                                                                                            #
 #   Created date    : 15/02/2023                                                                                                                    #
 #   Last updated    : 15/02/2023                                                                                                                    #
-#   Auther          : Mohammed El-Mustafa Ahmed                                                                                                     #
+#   Author          : Mohammed El-Mustafa Ahmed                                                                                                     #
 #   Description     : This program can find all the prime factors of 600851475143 (generally n) and print the largest factor.                       #
 #####################################################################################################################################################
 
@@ -14,19 +14,24 @@
 #   Find the largest palindrome made from the product of two 3-digit numbers. #
 ###############################################################################
 
-def is_palindrome(n):
-    return n == int(str(n)[::-1])
+import math
 
-palin = 0
-for i in range(999, 99, -1):
-    if i * 999 < palin:
-        break
-    for j in range(999, i - 1, -1):
-        n = i * j
-        if n > palin and is_palindrome(n):
-            palin = n
-            break
-        elif n < palin:
-            break
+# def gcd(a, b):
+#   while b != 0:
+#     a, b = b, a % b
+#   return a
 
-print(palin)
+# m = 20
+# for i in range(1, 20):
+#   m = m * i // gcd(i, m)
+# print(m)
+
+
+m = 1
+for i in range(2, 21):
+    m = m * ( i ** (int(math.log(20, i)) * (m % i != 0)) )
+print(m)
+
+
+# m = (2 ** 4) * (3 ** 2) * 5 * 7 * 11 * 13 * 17 * 19
+# print(m)

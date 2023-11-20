@@ -1,5 +1,5 @@
 #####################################################################################################################################################
-#   Source Name     : 001. Multiples of 3 or 5.py                                                                                                   #
+#   Source Name     : code.py                                                                                                   #
 #   Version         : 1.0                                                                                                                           #
 #   Link            : https://projecteuler.net/problem=1                                                                                            #
 #   Created date    : 12/02/2023                                                                                                                    #
@@ -18,8 +18,8 @@
 
 
 # The fact that we want all multiplies of x or y can give us the idea of just summing over all the multiplies of each,
-# but some multiplies are common between x and y like x * y so we use the inclusion-exclusion principle, so we just sum
-# over them and then take out all the common multiplies since they will be counted twice.
+# but some multiplies are common between x and y like x * y so we use the inclusion-exclusion principle, and we sum
+# over them and then take out all the common multiplies since they will be counted twice otherwise.
 
 #----------------------- The easy solution -----------------------#
 

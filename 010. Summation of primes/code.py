@@ -1,4 +1,3 @@
-import math
 import time
 
 start = time.time()
@@ -6,7 +5,7 @@ start = time.time()
 list = [i for i in range(2, 2000000)]
 
 for i in range(len(list)):
-    if list[i] > math.sqrt(2000000):
+    if list[i] ** 2 > 2000000:
         break
     if list[i] == 0:
         continue

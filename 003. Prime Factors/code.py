@@ -1,10 +1,10 @@
 #####################################################################################################################################################
-#   Source Name     : 003. Multiples of 3 or 5.py                                                                                                   #
+#   Source Name     : code.py                                                                                                   #
 #   Version         : 1.0                                                                                                                           #
 #   Link            : https://projecteuler.net/problem=3                                                                                            #
 #   Created date    : 13/02/2023                                                                                                                    #
 #   Last updated    : 13/02/2023                                                                                                                    #
-#   Auther          : Mohammed El-Mustafa Ahmed                                                                                                     #
+#   Author          : Mohammed El-Mustafa Ahmed                                                                                                     #
 #   Description     : This program can find all the prime factors of 600851475143 (generally n) and print the largest factor.                       #
 #####################################################################################################################################################
 
@@ -16,7 +16,7 @@
 
 #----------------------- The Solution -----------------------#
 
-# The idea is just to use the divison method to find all factors.
+# The idea is just to use the division method to find all factors.
 # We start by 2 then add the 2 to the factor list and divide the number by 2 until it can't be divided by it anymore.
 # Then we start iterating the odd numbers starting by 3 and whenever a number is a factor we add it to the list and 
 # divide n by it until it can't be divided anymore. The resulting list is sure to have only prime numbers since only
